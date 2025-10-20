@@ -1,0 +1,10 @@
+{
+    "name": "webflow-firebase-template",
+    "version": "1.0.0",
+    "description": "Scripts for hosting Webflow sites on Firebase",
+    "scripts": {
+      "pull-webflow": "cd public && wget https://jamesnorton-design-v3-0.webflow.io/ --recursive --page-requisites --html-extension --convert-links -xnH -e robots=off", 
+      "push-github": "git add . && git commit -m \"Push custom code\" && git push",
+      "sync": "npm run pull-webflow && npm run push-github"
+    }
+  }
