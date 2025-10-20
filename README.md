@@ -1,5 +1,5 @@
 # jamesnorton.design
-Public portfolio. Webflow to Firebase setup hosting set up. 
+Public portfolio. Webflow to Firebase hosting set up. 
 
 Background: This repository is a version of the Webflow site located at https://jamesnorton-design-v3-0.webflow.io/ that's been customised for self-hosting. 
 
