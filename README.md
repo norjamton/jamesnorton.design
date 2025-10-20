@@ -1,6 +1,4 @@
 # jamesnorton.design
-Public portfolio. Scripts for pulling from Webflow and syncing with Github.
-
 Background: This repository is a version of the Webflow site located at https://jamesnorton-design-v3-0.webflow.io/ that's been customised for self-hosting. 
 
 Purpose: The primary objective of this repository is to facilitate the following processes:
