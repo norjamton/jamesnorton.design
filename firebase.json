@@ -10,17 +10,17 @@
     "redirects": [
       {
         "source": "/case-studies/supa",
-        "destination": "/archive/2020/case-studies/supa",
+        "destination": "https://jamesnorton-design-archive.web.app/2020/case-studies/supa",
         "type": 301
       },
       {
         "source": "/case-studies/spotify",
-        "destination": "/archive/2020/case-studies/spotify",
+        "destination": "https://jamesnorton-design-archive.web.app/2020/case-studies/spotify",
         "type": 301
       },
       {
         "source": "/case-studies/metrik-space",
-        "destination": "/archive/2020/case-studies/metrik-space",
+        "destination": "https://jamesnorton-design-archive.web.app/2020/case-studies/metrik-space",
         "type": 301
       }
     ]
