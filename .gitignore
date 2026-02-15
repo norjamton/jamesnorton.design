@@ -141,3 +141,6 @@ vite.config.ts.timestamp-*
 
 # DS Store files
 .DS_Store
+
+# Google Cloud service account key
+functions/service-account.json

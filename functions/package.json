@@ -1,0 +1,13 @@
+{
+  "name": "visitor-counter",
+  "description": "Firebase Cloud Function to serve GA4 visitor count for jamesnorton.design",
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-functions": "^6.0.0",
+    "firebase-admin": "^12.0.0",
+    "@google-analytics/data": "^4.0.0"
+  }
+}
