@@ -144,3 +144,7 @@ vite.config.ts.timestamp-*
 
 # Google Cloud service account key
 functions/service-account.json
+
+# Private content (case studies, backups)
+hidden/
+backups/
