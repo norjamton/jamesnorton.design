@@ -1,4 +1,30 @@
 {
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "redirects": [
+      {
+        "source": "/case-studies/supa",
+        "destination": "/archive/2020/case-studies/supa",
+        "type": 301
+      },
+      {
+        "source": "/case-studies/spotify",
+        "destination": "/archive/2020/case-studies/spotify",
+        "type": 301
+      },
+      {
+        "source": "/case-studies/metrik-space",
+        "destination": "/archive/2020/case-studies/metrik-space",
+        "type": 301
+      }
+    ]
+  },
   "functions": {
     "source": "functions",
     "runtime": "nodejs20"
