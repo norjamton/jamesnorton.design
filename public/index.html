@@ -989,6 +989,44 @@
         </div>
       </div>
       <section id="top" class="top_wrap"></section>
+      <!-- ── Figma navbar redesign — pill + glass gradient ──────────────── -->
+      <style>
+        /* Strip Webflow's nav background so the pill shows through */
+        .navbar.w-nav {
+          background: transparent !important;
+          box-shadow: none !important;
+        }
+
+        /* The floating pill container */
+        .nav_contain.w-container {
+          display: flex !important;
+          align-items: center !important;
+          gap: 6px !important;
+          background:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)),
+            linear-gradient(90deg, rgba(37, 86, 226, 0.05), rgba(37, 37, 197, 0.05) 50%, rgba(201, 155, 30, 0.05)),
+            rgb(252, 250, 244) !important;
+          border-radius: 999px !important;
+          padding: 6px 12px !important;
+          max-width: fit-content !important;
+          border: 1px solid rgba(0, 0, 0, 0.07) !important;
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07) !important;
+        }
+
+        /* Pill shape on individual nav links */
+        .nav_link.w-inline-block {
+          border-radius: 999px !important;
+          padding: 8px 16px !important;
+        }
+
+        /* Nav item text size to match Figma (14px / Inter) */
+        .nav_item_text {
+          font-size: 14px !important;
+          line-height: 1.2 !important;
+        }
+      </style>
+      <!-- ─────────────────────────────────────────────────────────────────── -->
+
       <section id="nav" class="nav_wrap">
         <div
           data-animation="default"
