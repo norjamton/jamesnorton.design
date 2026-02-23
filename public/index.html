@@ -1086,6 +1086,16 @@
             transform: translateX(-50%) translateY(0);
           }
         }
+        @keyframes counter-hide {
+          from {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-12px);
+          }
+        }
 
         /* Transparent wrapper — fixed position anchor only, no background */
         .navbar.w-nav {
@@ -1265,34 +1275,10 @@
               color: var(--theme--text-subtle);
             "
           >
-            <span
-              style="
-                position: relative;
-                display: inline-block;
-                width: 6px;
-                height: 6px;
-              "
-              ><span
-                style="
-                  position: absolute;
-                  inset: 0;
-                  border-radius: 50%;
-                  background: #22c55e;
-                  animation: pulse-dot 3s ease-in-out infinite;
-                "
-              ></span
-              ><span
-                style="
-                  position: absolute;
-                  inset: -2px;
-                  border-radius: 50%;
-                  background: #22c55e;
-                  opacity: 0;
-                  animation: pulse-ring 3s ease-in-out infinite;
-                "
-              ></span></span
+            <span aria-hidden="true">👋</span
             ><span id="visitor-text"></span>
           </div>
+          <!-- gradient orb hidden for experiment — restore from main if needed
           <div class="code-embed w-embed w-script">
             <div class="gradient-container" style="pointer-events: auto">
               <div class="gradient-orb"></div>
@@ -1431,6 +1417,7 @@
               animate();
             </script>
           </div>
+          -->
         </section>
         <section id="work" class="work_wrap">
           <div
@@ -2891,14 +2878,24 @@
         var loaded = false;
         var heroVisible = true;
         var revealed = false;
+        var dismissed = false;
 
         function setVisibility() {
+          if (dismissed) {
+            wrap.classList.add("is-hidden");
+            return;
+          }
           if (loaded && heroVisible) {
             if (!revealed) {
               /* First reveal — trigger the slide-down animation */
               wrap.classList.add("is-revealed");
               wrap.classList.remove("is-hidden");
               revealed = true;
+              /* Auto-hide after 5 seconds — mirror of the reveal animation */
+              setTimeout(function () {
+                dismissed = true;
+                wrap.style.animation = "counter-hide 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards";
+              }, 5000);
             } else {
               wrap.classList.remove("is-hidden");
             }
@@ -2919,7 +2916,7 @@
           .then(function (r) { return r.json(); })
           .then(function (d) {
             if (d.count) {
-              txt.textContent = "You\u2019re visitor " + d.count.toLocaleString() + ", welcome!";
+              txt.textContent = "You\u2019re visitor " + d.count.toLocaleString() + " \u2014 welcome!";
               loaded = true;
               setVisibility();
             }
